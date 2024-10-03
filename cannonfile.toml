@@ -7,4 +7,4 @@ source = "greeter:2.11.0"
 
 [deploy.Coffee]
 artifact = "BuyMeACoffee"
-args = ["<%= imports.greeter.Greeter.address %>"]
+args = ["<%= greeter.Greeter.address %>"]
