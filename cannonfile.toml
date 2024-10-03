@@ -1,0 +1,10 @@
+name = "buy-me-a-coffee-foundry"
+version = "0.0.1"
+description = "Buy me a coffee - Sample Foundry Project"
+
+[pull.greeter]
+source = "greeter:2.11.0"
+
+[deploy.Coffee]
+artifact = "BuyMeACoffee"
+args = ["<%= imports.greeter.Greeter.address %>"]
