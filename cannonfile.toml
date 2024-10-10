@@ -1,10 +1,14 @@
-name = "buy-me-a-coffee-foundry"
+name = "learn-cannon"
 version = "0.0.1"
-description = "Buy me a coffee - Sample Foundry Project"
+description = "Cannon learn - Sample Foundry Project"
 
-[pull.greeter]
-source = "greeter:2.11.0"
+[deploy.counter]
+artifact = "Counter"
 
-[deploy.Coffee]
-artifact = "BuyMeACoffee"
-args = ["<%= greeter.Greeter.address %>"]
+[var.main]
+number = "420"
+
+[invoke.set_number]
+target = ["counter"]
+func = "setNumber"
+args = ["<%= settings.number %>"]
